@@ -6,7 +6,6 @@ from matplotlib.animation import FuncAnimation
 
 #CONSTANTS
 c=299792458
-secInYear = 31557600
 
 #MANUAL INPUT
 timeStep= 1000 #time step in years
