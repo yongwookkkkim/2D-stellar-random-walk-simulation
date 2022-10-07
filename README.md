@@ -11,4 +11,4 @@ You need to manually put in the time step [yr], mean free path [m], stellar radi
 The code outputs a real-time visualisation of the evolving system.
 The title of the plot shows the time elapsed, mean distance of the photons from the center, and the number of photons that had escaped the atmosphere. Every time a photon escapes the star, the time elapsed before the photon was liberated is printed. 
 
-Simple average all outputs to approximate the time it takes for the average photon to escape the earth.
+Simple average all printed outputs to approximate the time it takes for the average photon to escape the earth.
