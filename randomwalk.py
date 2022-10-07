@@ -49,6 +49,6 @@ def animate(count):
 
 ani=FuncAnimation(plt.gcf(), animate) #interval in milliseconds, gcf=get current function
 
-plt.xlim(-50,50)
-plt.ylim(-50,50)
+plt.xlim(-1.1*frac,1.1*frac)
+plt.ylim(-1.1*frac,1.1*frac)
 plt.show()
