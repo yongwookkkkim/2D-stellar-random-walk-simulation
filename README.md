@@ -5,7 +5,7 @@ With every step, each photon moves the distance equivalent to (mean free path [m
 The outer bound (the stellar boundary) has the radius of (stellar radius [m]).
 
 [INPUT]
-You need to manually put in the time step [yr], mean free path [m], stellar radius [m], number of photons too simulate [#], and collision rate [#/s].
+You need to manually put in the time step [yr], the average displacement a photon covers in the given time step [m], stellar radius [m], and number of photons to simulate [#].
 
 [OUTPUT]
 The code outputs a real-time visualisation of the evolving system.
