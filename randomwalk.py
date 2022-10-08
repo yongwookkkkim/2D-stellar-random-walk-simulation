@@ -4,9 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
-#CONSTANTS
-c=299792458
-
 #MANUAL INPUT
 timeStep= 1000 #time step in years
 meanFreePath= 100 #the average displacement of a photon in one timestep.
