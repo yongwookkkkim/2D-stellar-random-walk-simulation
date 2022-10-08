@@ -1,3 +1,4 @@
+from decimal import DivisionByZero
 import sys
 import random
 import numpy as np
@@ -6,12 +7,12 @@ from matplotlib.animation import FuncAnimation
 
 #MANUAL INPUT
 timeStep= 1000 #time step in years
-meanFreePath= 100 #the average displacement of a photon in one timestep.
+avgDisplacement= 100 #the average displacement of a photon in one timestep.
 stellarRadius= 4500 #stellar radius in meters
 photonNo=30 #number of photons to simulate
 
 #DO NOT EDIT
-frac = stellarRadius/meanFreePath
+frac = stellarRadius/avgDisplacement
 
 x_vals=np.zeros(photonNo)
 y_vals=np.zeros(photonNo)
@@ -39,7 +40,10 @@ def animate(count):
     meandistance=0
     for k in range(len(x_vals)):
         meandistance+=np.sqrt(x_vals[k]*x_vals[k] + y_vals[k]*y_vals[k])
-    meandistance /= len(x_vals)
+    try:
+        meandistance /= len(x_vals)
+    except DivisionByZero:
+        meandistance=0
     plt.title(f"time elapsed: {round(count*timeStep)} years \n mean distance from the center: {round(meandistance,2)} \n {photonNo-len(x_vals)} photon(s) escaped")
     plt.plot(t,circleup, color='r', linestyle='--')
     plt.plot(t,circledown, color='r', linestyle='--')
